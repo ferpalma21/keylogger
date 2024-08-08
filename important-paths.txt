@@ -1,0 +1,8 @@
+/proc/bus/input/devices   -> what device is the keyboard
+/dev/input/    -> where the device is
+/usr/include/linux/input.h   -> where the input structure is define
+/usr/include/linux/input-event-codes.h    -> translation of event codes
+
+
+#docuentaion
+https://www.kernel.org/doc/Documentation/input/input.txt
