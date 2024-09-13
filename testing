@@ -1,0 +1,18 @@
+#!/bin/bash
+
+while true; do
+    # Get the window ID of the currently active window
+    window_id=$(xprop -root _NET_ACTIVE_WINDOW | awk '{print $NF}')
+    
+    # Check if window ID is valid
+    if [ "$window_id" != "0x0" ]; then
+        # Retrieve and print the window title
+        window_title=$(xprop -id "$window_id" WM_NAME)
+        echo "Active window title: $window_title"
+    else
+        echo "No active window detected"
+    fi
+
+    # Sleep for a while before checking again
+    sleep 1
+done
